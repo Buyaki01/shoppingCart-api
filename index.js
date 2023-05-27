@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000
 const mongoose = require('mongoose')
 const Product = require('./models/Product')
 
-app.use(cors())
+app.use(cors({ origin: 'http://localhost:5173' }))
 app.use(express.json())
 
 mongoose.connect(process.env.MONGO_URL)
