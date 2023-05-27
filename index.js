@@ -21,6 +21,10 @@ app.post('/products', async (req, res) => {
   res.json(productDoc)
 })
 
+app.get('/products', async (req, res) => {
+  res.json( await Product.find())
+})
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 })
